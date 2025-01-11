@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'MaPolice'; /* Nom de la police que tu vas utiliser dans ton CSS */
+    src: url('TAN-MONCHERI.woff2') format('woff2'), /* Lien vers le fichier de police (woff2 ici) */
+         url('TAN-MONCHERI.woff') format('woff'),/* Lien vers le fichier de police (woff ici) */
+         url('TAN-MONCHERI.ttf') format('truetype');
+    font-weight: normal; /* Poids de la police (normal, bold, etc.) */
+    font-style: normal; /* Style de la police (normal, italic, etc.) */
+}
+
+.container-fluid{
+    margin: 0px;
+    padding: 0px;
+}
+
+.alternative {
+    top: 0;               /* Place l'image en haut de la page */
+    left: 0;              /* Place l'image à gauche de la page */
+    width: 100%;          /* Remplie toute la largeur de la page */
+    height: 100vh;        /* Remplie la hauteur de la fenêtre (viewport) */
+    background-image: url('images/IK11-1.jpeg'); /* Lien vers l'image */
+    background-size: cover;   /* Couvre toute la page sans déformation */
+    background-position: center center;  /* Centre l'image */
+    background-repeat: no-repeat;  /* Empêche l'image de se répéter */
+    z-index: -1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alternative2 {
+    height: 100vh;        /* Remplie la hauteur de la fenêtre (viewport) */
+    background-image: url('images/noOffers.png'); /* Lien vers l'image */
+    background-position: center center;  /* Centre l'image */
+    background-repeat: no-repeat;  /* Empêche l'image de se répéter */
+    z-index: 0;
+}
+
+.bg{
+    width: 100vh;
+    background-color: #ffffff;
+    padding: 20px;
+    padding-right: 40px;
+    border-radius: 30px;
+}
+
+header{
+    background-color: #4b5e00;;
+    height: 100px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modify h4.titre{
+    font-family: 'MaPolice';
+}
+
+.modify{
+    background-color: #ffffff;
+    padding: 10px;
+    padding-right: 50px;
+    text-align: center;
+    font-size: 15px;
+    box-shadow: 0px 3px 5px #ede9e5;
+}
+
+.between{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.around{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo{
+    height: 100px;
+}
+
+p{
+    font-family: 'Martel Sans';
+}
+
+.h1 a, .fake2{
+    font-family: 'MaPolice';
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.h1 a:hover, .fake2:hover{
+    color: #20252d;
+    cursor: pointer;
+}
+
+#messages{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    scrollbar-width: thin; /* "auto" or "thin" */
+    scrollbar-color: #ede9e5 #ffffff; /* scroll thumb and track */
+}
+
+.envoi{
+    align-self: flex-end;
+    border-radius: 10px;
+    border: 1px solid ede9e5;
+    background-color: #ede9e5;
+    margin: 10px;
+    padding: 10px;
+    max-width: 60%;
+}
+
+.recois{
+    border-radius: 10px;
+    border: 1px solid #ede9e5;
+    margin: 10px;
+    padding: 10px;
+    max-width: 60%;
+}
+
+#messagerie{
+    border-top: 1px solid #20252d;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    justify-items: end;
+    align-items: end;
+}
+
+label{
+    font-family: 'DM sans';
+    font-weight: 600;
+}
+
+input.text{
+    margin: 10px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    background-color: #ede9e5;
+}
+
+input.number{
+    margin: 10px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 50px;
+    border: none;
+    background-color: #ede9e5;
+}
+
+input.button, #messages button, #messages input.button{
+    color: #20252d;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+    background-color: #ffffff;
+}
+
+#messages button.exit{
+    align-self: baseline;
+}
+
+input.select, select.select{
+    padding: 10px;
+    background-color: #20252d;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+}
+
+button.button:hover, button.borderLeft{
+    width: 150px;
+    border: 1px solid #20252d;
+    background-color: #20252d;
+    color: #ffffff;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+button.button{
+    width: 150px;
+    border: 1px solid #20252d;
+    background-color: #ffffff;
+    color: #20252d;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+button.borderLeft{
+    border-radius: 30px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+button.borderRight{
+    border-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.offre{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #ede9e5;
+    box-shadow: 0px 3px 5px #ede9e5;
+    display: flex;
+    align-items: center;
+}
+
+#proposition{
+    font-weight: 600;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #20252d;
+    border-bottom: 1px solid #20252d;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#proposition input{
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 50px;
+    border: none;
+    background-color: #ede9e5;
+    margin: 10px;
+    text-align: center;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ReNovo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/accueil.css">
+        <link href="https://fonts.googleapis.com/css2?family=Martel Sans&family=DM Sans:wght@400;700&display=swap" rel="stylesheet">
+        <script defer src="index.bundle.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <!-- INTRODUCTION-->
+            <section id="section1" class="bg" onclick="scrollToTop1()">
+                <header class="h1" style="justify-content: space-between;">
+                    <img src="css/images/1-removebg-preview(1).png" class="logo">
+                    <a class="fake1" onclick="verification(0)"><h3 style="font-size: 16px; padding-right: 20px;">MON COMPTE</h3></a>
+                </header>
+                <div class="bottomleft" style="width: 30%;">
+                    <h1 class="titre1">LE MOBILIER D'OCCASION CHIC</h1>
+                </div>
+            </section>
+
+            <section id="section2" style="background-color: #4b5e00; padding: 100px; align-items: end;" onclick="scrollToTop2()">
+                    <h1 class="titre2">DONNER UNE DEUXIEME VIE A VOS MEUBLE</h1>
+                    <p style="color: #ffffff;">Nous nous efforçons diminuer la consomation en masse de produit qui peuvent encore être utiliser mais qui ne conviennent plus à leur propriètaire.Aménagez vos maisons avec des meubles chics et moins cher et soyez enfin fiere de vos achats.</p>
+            </section>
+
+            <!-- PAGE PRINCIPALE -->
+            <section id="section3">
+                <header class="h2"  style="justify-content: space-between;">
+                    <a href="index.html"><img src="css/images/2-removebg-preview(1).png" class="logo"></a>
+                    <nav class="nav">
+                        <a class="fake2" onclick="verification(0)"><h3 style="font-size: 16px; padding-right: 20px;">MON COMPTE</h3></a>
+                        <a href="compte.html#favoris"><h3 class="navigation">MES FAVORIS</h3></a>
+                        <a class="fake2" onclick="verification(1)"><h3 style="font-size: 16px; padding-right: 20px;">MESSAGERIE</h3></a>
+                        <a href="offres.html"><h3 style="font-size: 16px; padding-right: 20px;">OFFRES</h3></a>
+                    </nav>
+                </header>
+                <div class="h1 modify" id="filtrage">
+                    <div class="row">                    
+                        <form class="element">
+                            <input type="text" id="recherche" placeholder="Recherche">
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 element">
+                            <form>
+                                <label>Prix:</label>
+                                <div class="between">
+                                    <input type="text" id="p1" class="outer-element prix" placeholder="00.0 €">
+                                    <p> jusqu'à </p>
+                                    <input type="text" id="p2" class="outer-element prix" placeholder="00.0 €">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-7 element">
+                            <label>Pièces:</label>
+                            <div class="element" style="display: flex;flex-direction: row;justify-content: space-around;">
+                                <a href=""><p>Salon</p></a>
+                                <a href=""><p>Chambre</p></a>
+                                <a href=""><p>Cuisine</p></a>
+                                <a href=""><p>Salle de bain</p></a>
+                                <a href=""><p>Jardin</p></a>
+                                <a href=""><p>Autres...</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ARTICLES-->
+                <section style="padding: 50px;">
+                    <h3 class="titre4">Pourrait vous intéresser</h3>
+                    <div class="row" id="articles">
+                        
+                    </div>
+                </section>
+            </section>
+        </div>
+    </body>
+
+    <script>
+        const section2 = document.getElementById('section2');
+        const section3 = document.getElementById('section3');
+        console.log(sessionStorage.getItem('pseudo'));
+
+        function scrollToTop1() {
+            section2.scrollIntoView(true);
+        }
+        function scrollToTop2() {
+            section3.scrollIntoView(true);
+        }
+
+        function verification(indice){
+            if(indice == 1){
+                if(sessionStorage.getItem('pseudo')==null){
+                    location.href='connexion.html';
+                }
+                else{
+                    location.href='messagerie.html';
+                }
+            }
+            else{
+                if(sessionStorage.getItem('pseudo')==null){
+                    location.href='connexion.html';
+                }
+                else{
+                    location.href='compte.html';
+                }
+            }
+        }
+    </script>
+</html>

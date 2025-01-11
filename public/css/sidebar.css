@@ -1,0 +1,68 @@
+.page{
+    display: flex;
+    height: 100%;
+}
+
+.part1{
+    width: 300px;
+    min-width: 300px;
+}
+
+.part2{
+    width: 100%;
+}
+
+.sidebar{
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    border-right: 1px solid #20252d;
+    height: 100%;
+    overflow: auto;
+
+    scrollbar-width: thin; /* "auto" or "thin" */
+    scrollbar-color: #ede9e5 #ffffff; /* scroll thumb and track */
+  }
+  
+  .sidebar button {
+    width: 100%;
+    display: block;
+    color: #20252d;
+    padding: 16px;
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #ede9e5;
+    text-align: left;
+    text-decoration: none;
+  }
+  
+  .sidebar button:hover{
+    background-color: #ede9e5;
+  }
+
+  .custom1{
+    height: 100vh;
+    overflow: scroll;
+  }
+
+  .custom2{
+    height: 50vh;
+    overflow: scroll;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar div {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar div {
+      text-align: center;
+      float: none;
+    }
+  }

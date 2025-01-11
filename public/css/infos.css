@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'MaPolice'; /* Nom de la police que tu vas utiliser dans ton CSS */
+    src: url('TAN-MONCHERI.woff2') format('woff2'), /* Lien vers le fichier de police (woff2 ici) */
+         url('TAN-MONCHERI.woff') format('woff'),/* Lien vers le fichier de police (woff ici) */
+         url('TAN-MONCHERI.ttf') format('truetype');
+    font-weight: normal; /* Poids de la police (normal, bold, etc.) */
+    font-style: normal; /* Style de la police (normal, italic, etc.) */
+}
+
+body{
+    background-color: #8b3d26;
+}
+
+body.alternative{
+    background-color: #4b5e00;
+}
+
+.alternative2{
+    margin-top: 35px;
+    background-color: #ffffff;
+}
+
+.logo{
+    height: 100px;
+}
+
+.titre{
+    font-family: 'MaPolice';
+}
+
+.img{
+    background-image: url('images/piece.jpg'); /* Lien vers l'image */
+    background-size: cover;   /* Couvre toute la page sans déformation */
+    background-position: center center;  /* Centre l'image */
+    background-repeat: no-repeat;  /* Empêche l'image de se répéter */
+}
+
+/*
+#content{
+    background-image: url('images/IK11-1.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+*/
+
+
+.formulaire{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formulaire2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+form{
+    width: 60%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    margin: 10px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 50px;
+    border: 1px solid #412f21;
+}
+
+button{
+    margin: 10px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    background-color: #20252d;
+    color: #ffffff;
+}
+
+input.button{
+    background-color: #412f21;
+    color: #ffffff;
+}
+
+.row{
+    height: 100vh;
+}
+
+.row.number-2{
+    height: 100%;
+}
+
+label, p, h2{
+    font-family: 'Martel Sans';
+}
+
+label{
+    font-size: 12px;
+    color: #8f8989;
+}
+
+.bg{
+    width: 95%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #ffffff;
+    color: #20252d;
+    font-family: 'Martel Sans';
+    padding: 20px;
+}
+
+.bg2{
+    padding: 20px;
+}
+
+.bg3{
+    width: 95%;
+    border-radius: 15px;
+    background-color: #ffffff;
+    color: #20252d;
+    font-family: 'Martel Sans';
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: space-around;
+}
+
+#details{
+    padding: 50px;
+}
+
+.between{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.around{
+    display: flex;
+    justify-content: space-around;
+}

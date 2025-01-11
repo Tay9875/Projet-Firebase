@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'MaPolice'; /* Nom de la police que tu vas utiliser dans ton CSS */
+    src: url('TAN-MONCHERI.woff2') format('woff2'), /* Lien vers le fichier de police (woff2 ici) */
+         url('TAN-MONCHERI.woff') format('woff'),/* Lien vers le fichier de police (woff ici) */
+         url('TAN-MONCHERI.ttf') format('truetype');
+    font-weight: normal; /* Poids de la police (normal, bold, etc.) */
+    font-style: normal; /* Style de la police (normal, italic, etc.) */
+  }
+
+.container-fluid{
+    margin: 0px;
+    padding: 0px;
+}
+
+.bg {
+    top: 0;               /* Place l'image en haut de la page */
+    left: 0;              /* Place l'image à gauche de la page */
+    width: 100%;          /* Remplie toute la largeur de la page */
+    height: 100vh;        /* Remplie la hauteur de la fenêtre (viewport) */
+    background-image: url('images/IK11-1.jpeg'); /* Lien vers l'image */
+    background-size: cover;   /* Couvre toute la page sans déformation */
+    background-position: center center;  /* Centre l'image */
+    background-repeat: no-repeat;  /* Empêche l'image de se répéter */
+    z-index: -1;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    font-size: 20px;
+  }
+
+
+.bottomright {
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+  }
+
+header{
+    height: 100px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.h1{
+    border-bottom: 1px solid #412f21;
+}
+
+.h1 h3, .h2 h3{
+    font-family: 'MaPolice';
+}
+
+.h2{
+    background-color: #4b5e00;
+    border-top: 1px solid #412f21;
+}
+
+.navigation{
+    font-size: 16px;
+    padding-right: 20px;
+}
+
+.modify{
+    font-size: 15px;
+    box-shadow: 0px 3px 5px #ede9e5;
+}
+
+.between{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.logo{
+    height: 100px;
+}
+
+.titre1{
+    font-family: 'MaPolice';
+    font-size: 83px;
+    color: #412f21;
+}
+
+.titre2{
+    font-family: 'MaPolice';
+    font-size: 63px;
+    color: #dfa237;
+}
+
+.titre3{
+    font-family: 'MaPolice';
+}
+
+.titre4{
+    font-family: 'DM Sans';
+    color: #412f21;
+    font-weight: 800;
+}
+
+p{
+    font-family: 'Martel Sans';
+}
+
+.h1 a, .fake1{
+    color: #412f21;
+    cursor: pointer;
+}
+
+.h2 a, .fake2{
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.h1 a:hover, .fake1:hover{
+    color: #dfa237;
+    cursor: pointer;
+}
+
+.h2 a:hover, .fake2:hover{
+    color: #20252d;
+    cursor: pointer;
+}
+
+.w{
+    width: 100%;
+}
+
+nav.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+label{
+    padding: 5px;
+}
+
+input{
+    height: 15px;
+    border-radius: 50px;
+    border: 1px solid #20252d;
+    font-size: 15px;
+    padding: 15px;
+    width: 100%;
+}
+
+input.prix{
+    border-radius: 0px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #20252d;
+}
+
+.outer-element{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.element{
+    padding-top: 10px;
+    padding-bottom: 2.5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.article{
+    border-radius: 15px;
+    border: 1px solid #20252d;
+    width: 100%;
+    height: 250px;
+}
+
+.article.info{
+    padding: 5px;
+}
+
+.align{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*text-transform: uppercase;*/
+}
+
+.card{
+    padding: 10px;
+    height: 350px;
+    min-width: 260px;
+    border-radius: 15px;
+    box-shadow: 0px 1px 3px #ede9e5;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+}
+
+small{
+    font-size: 12px;
+    color: #8f8989;
+}
+
+#info{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#info form input{
+    padding: 10px;
+    height: 40px;
+    background-color: transparent;
+    margin-bottom: 5px;
+}
+
+#info form input.button{
+    border: none;
+    background-color: #20252d;
+    color: #ffffff;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#info form input.button:hover{
+    border: none;
+    background-color: #dfa237;
+    color: #20252d;
+}
+
+.borderLeft{
+    border-radius: 30px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.borderRight{
+    border-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}

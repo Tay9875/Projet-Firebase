@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ReNovo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/accueil.css">
+        <link href="https://fonts.googleapis.com/css2?family=Martel Sans&family=DM Sans:wght@400;700&display=swap" rel="stylesheet">
+        <script defer src="compte.bundle.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header class="h2"  style="justify-content: space-between; margin-bottom: 0px; border-bottom: 1px solid #412f21;">
+                <a href="index.html"><img src="css/images/2-removebg-preview(1).png" class="logo"></a>
+                <nav class="nav" id="navigation">
+                    <a class="fake2" href="ajouter.html"><h3 class="navigation">AJOUTER</h3></a>
+                    <a class="fake2" onclick="verification(0)"><h3 class="navigation">MON COMPTE</h3></a>
+                    <a href="#favoris"><h3 class="navigation">MES FAVORIS</h3></a>
+                    <a class="fake2" onclick="verification(1)"><h3 class="navigation">MESSAGERIE</h3></a>
+                    <a href="offres.html"><h3 style="font-size: 16px; padding-right: 20px;">OFFRES</h3></a>
+                    <a class="fake2" style="color: #dfa237" onclick="deconnexion()"><h3 class="navigation">DECONNEXION</h3></a>
+                </nav>
+            </header>
+            <section id="section2" style="background-color: #4b5e00; padding: 100px;">
+                <h1 class="titre2">MON ESPACE</h1>
+                <div id="info" style="text-align: center;">
+                </div>
+            </section>
+            <!-- ARTICLES-->
+            <section style="padding: 50px;">
+                <h3 class="titre4">Vos Articles</h3>
+                <div class="row" id="articles">
+                    
+                </div>
+                <h3 class="titre4"  id="favoris">Mes favoris</h3>
+                <div class="row" id="articles-favoris">
+                        
+                </div>
+            </section>
+        </div>
+    </body>
+
+    <script>
+        function verification(indice){
+            if(indice == 1){
+                if(sessionStorage.getItem('pseudo')==null){
+                    location.href='connexion.html';
+                }
+                else{
+                    location.href='messagerie.html';
+                }
+            }
+            else{
+                if(sessionStorage.getItem('pseudo')==null){
+                    location.href='connexion.html';
+                }
+                else{
+                    location.href='compte.html';
+                }
+            }
+        }
+
+        function furtherModif(){
+            alert('Veuillez continuer la modification dans votre boîte mail');
+        }
+
+        function deconnexion(){
+            sessionStorage.clear();
+            location.href='index.html';
+        }
+    </script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ReNovo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/simple.css">
+        <link rel="stylesheet" href="css/sidebar.css">
+        <link href="https://fonts.googleapis.com/css2?family=Martel Sans:wght@400;700&display=swap" rel="stylesheet">
+        <script defer src="messagerie.bundle.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header class="h1" style="justify-content: space-between;">
+                <a href="index.html"><img src="css/images/2-removebg-preview(1).png" class="logo"></a>
+                <nav style="display: flex;flex-direction: row;justify-content: space-around;">
+                    <a href="compte.html"><h3 style="font-size: 16px; padding-right: 20px;">MON COMPTE</h3></a>
+                    <a href="offres.html"><h3 style="font-size: 16px; padding-right: 20px;">OFFRES</h3></a>
+                    <a class="fake2" style="color: #dfa237" onclick="deconnexion()"><h3 style="font-size: 16px; padding-right: 20px;">DECONNEXION</h3></a>
+                </nav>
+            </header>
+            <section>
+                <div class="page">
+                    <div class="part1 sidebar custom1" id="conversations">
+                        
+                    </div>
+                    <div class="part2">
+                        <div class="modify between" id="article">
+
+                        </div>
+                        <section id="messages" class="custom2">
+                            
+                        </section>
+                        <form id="messagerie">
+                            <input type="text" class="text" id="contenu" placeholder="Ecrivez un message">
+                            <input type="submit" class="button" name="envoyer" value="Envoyez">
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+
+    <script>
+        function verification(){
+            if(sessionStorage.getItem('pseudo')==null){
+                location.href='connexion.html';
+            }
+            else{
+                location.href='compte.html';
+            }
+        }
+
+        function deconnexion(){
+            sessionStorage.clear();
+            location.href='index.html';
+        }
+
+        function fermer(){
+            document.querySelector('#proposition').style.display = "none";//on "retire" le form
+            document.querySelector('#exit').style.display = "none";
+        }
+    </script>
+</html>
